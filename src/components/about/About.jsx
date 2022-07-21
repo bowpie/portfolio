@@ -19,7 +19,10 @@ const About = () => {
 
       <div className="container about__container">
         <div className="about__me " data-aos="fade-right">
-          <img src="/images/imageme.png" alt="" />
+          <img
+            src="https://bowpie.github.io/portfolio/images/imageme.png"
+            alt=""
+          />
         </div>
         <div className="about__content" data-aos="fade-up">
           <div className="about__cards">

@@ -14,7 +14,10 @@ const Header = () => {
         <h5>Computer Science Student</h5>
         <HeaderButtons />
         <div className="me">
-          <img src={"/images/logome.png"} alt="me" />
+          <img
+            src={"https://bowpie.github.io/portfolio/images/logome.png"}
+            alt="me"
+          />
         </div>
 
         <a href="#contact" className="scroll__down">
