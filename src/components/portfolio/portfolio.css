@@ -1,0 +1,108 @@
+/* ================ CONTAINER ==================== */
+#portfolio {
+  background: var(--color-bg-section2);
+}
+
+.container.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  height: auto;
+  margin-top: 5rem;
+  gap: 3rem;
+}
+
+/* ================ CARDS ==================== */
+.project_card {
+  display: grid;
+  grid-template-rows: 45% 55%;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5rem;
+  background: var(--color-bg-variant);
+  border-radius: 2rem;
+  overflow: hidden;
+  border: solid 2px transparent;
+  transition: var(--transition);
+}
+
+.project_card:hover {
+  border: 2px solid var(--color-primary-variant);
+}
+.project_card > img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0rem;
+  /* border-top-left-radius: 2rem; */
+  border-radius: 2rem 2rem 0 0;
+}
+
+.project_card_content {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project_card_title {
+  text-align: center;
+  background: var(--color-primary);
+  color: var(--color-bg-variant);
+  font-size: 1.2rem;
+}
+
+.project_card_description {
+  text-indent: 2rem;
+  padding: 1rem 1.5rem;
+  height: 80%;
+  overflow: hidden;
+  color: var(--color-light);
+}
+
+.project_card_links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  bottom: 1rem;
+}
+
+.project_card_tags {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--color-light);
+  font-size: 0.8rem;
+  position: relative;
+  padding: 0rem 2rem;
+  bottom: 2rem;
+}
+
+.project_card_tags > span {
+  background-color: var(--color-primary);
+  color: var(--color-bg-variant);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ==================== */
+@media screen and (max-width: 1024px) {
+  .container.portfolio__container {
+    padding: 4rem;
+  }
+}
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ==================== */
+@media screen and (max-width: 600px) {
+  .container.portfolio__container {
+    padding: 0rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .project_card {
+    height: 100%;
+    padding-bottom: 10rem;
+  }
+  .project_card_description {
+    margin-bottom: 2rem;
+  }
+}

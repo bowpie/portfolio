@@ -1,0 +1,139 @@
+header {
+  height: 100vh;
+  padding-top: 4rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* ===================== CTA ================ */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.hero-second-line {
+  display: block;
+  padding: 0rem;
+}
+
+.hero {
+  color: var(--color-primary-variant);
+  height: auto;
+  margin: 0 auto;
+  max-height: 54vw;
+  max-width: 700px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90vw;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.hero-second-line,
+.hero-first-line {
+  display: block;
+  font-size: min(21.3vw, 165px);
+  line-height: 0.8;
+}
+
+.hero-second-line {
+  background: var(--color-primary-variant);
+  color: var(--color-bg);
+  font-size: min(13.2vw, 102.5px);
+  line-height: 1;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.container.header__container > h5 {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.container.header__container > a {
+  color: var(--color-primary-variant);
+}
+
+/* ===================== HEADER SOCIALS ================ */
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+
+.header__socials > a {
+  color: var(--color-primary-variant);
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary-variant);
+}
+
+/* ===================== ME - IMAGE ================ */
+
+.me {
+  width: 22rem;
+  height: 25rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 2rem;
+  border-radius: 2rem 5rem 2rem 5rem;
+  overflow: hidden;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: linear-gradient(
+    180deg,
+    transparent 10%,
+    var(--color-bg-variant) 90%
+  );
+}
+
+/* =====================SCROLL DOWN ================ */
+
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.container.header__container > .scroll__down:hover {
+  color: var(--color-white);
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ==================== */
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 68vh;
+  }
+}
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ==================== */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+  .container.header__container > h5 {
+    font-size: 1rem;
+  }
+}

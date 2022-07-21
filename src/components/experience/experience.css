@@ -1,0 +1,100 @@
+/* ================  CARDS ==================== */
+#experience {
+  background: var(--color-bg-section3);
+}
+
+.experience__card {
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 0rem 1rem 2rem;
+  margin: 1rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience__card:hover {
+  background: linear-gradient(var(--color-bg-variant), transparent);
+  cursor: default;
+  transition: var(--transition) !important;
+  transform: scale(1.25, 1.25) !important;
+}
+
+.experience__card h5 {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.experience__card small {
+  font-size: 0.8rem;
+  color: var(--color-white);
+}
+
+.experience__title {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.experience__level h6 {
+  font-size: 0.9rem;
+  padding-right: 5px;
+  color: var(--color-light);
+}
+.experience__level {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+
+/* ================  CONTAINERS ==================== */
+
+.experience__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container.skills__container {
+  border-radius: 3rem;
+  overflow: hidden;
+  margin-top: 0rem;
+  padding: 5rem 2rem 4rem;
+  background-color: var(--color-bg-variant);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(160px, 2fr));
+  height: 100%;
+  min-height: 50vh;
+  width: 90%;
+}
+
+.container.experience__container {
+  height: auto;
+}
+
+/* ================  LOAD MORE BUTTON ==================== */
+
+.experience__loadmore {
+  margin: 0 auto;
+  bottom: 5rem;
+  position: relative;
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ==================== */
+@media screen and (max-width: 1024px) {
+  .container.experience__container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ==================== */
+@media screen and (max-width: 600px) {
+  .container.experience__container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

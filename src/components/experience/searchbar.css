@@ -1,0 +1,78 @@
+.searchbar__wrapper {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: var(--color-bg-variant);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  z-index: 1;
+  transition: width 200ms ease-in-out 1ms;
+  top: 4rem;
+}
+
+.searchbar__wrapper.open {
+  width: 40%;
+}
+
+.searchbar__button {
+  position: relative;
+  font-size: 2rem;
+  color: var(--color-white);
+  display: flex;
+  align-content: center;
+  left: calc(3rem / 2 - 1rem);
+}
+
+.searchbar__button .searchbar__icon {
+  transition: all 200ms ease-in 1ms;
+}
+
+.searchbar__button .searchbar__icon:hover {
+  transform: scale(0.8, 0.8);
+}
+
+.searchbar__wrapper > input {
+  position: absolute;
+  left: 3rem;
+  width: calc(100% - 6rem);
+  height: 100%;
+  background-color: transparent;
+  color: var(--color-white);
+  z-index: 5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 0;
+}
+
+.searchbar__clear {
+  color: var(--color-white);
+  position: absolute;
+  font-size: 1.5rem;
+  left: calc(100% - 2rem);
+  z-index: 6;
+  transition: all 100ms ease-out 1ms;
+}
+
+.searchbar__clear:hover {
+  transform: scale(0.5, 0.5);
+}
+
+.searchbar__wrapper .searchbar__clear {
+  display: none;
+}
+
+.searchbar__wrapper.open .searchbar__clear {
+  display: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  .searchbar__wrapper.open {
+    width: 70%;
+  }
+}
